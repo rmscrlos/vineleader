@@ -2,26 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base {
+	:root {
+		--color-bkg: 0deg 0% 96%;
+		--color-content: 205deg 33% 19%;
+		--color-accent-1: 211deg 100% 56%;
+		--color-accent-2: 212deg 97% 74%;
+	}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--color-bkg: 205deg 33% 19%;
+			--color-content: 0deg 0% 96%;
+			--color-accent-1: 212deg 97% 74%;
+			--color-accent-2: 211deg 100% 56%;
+		}
+	}
+
+	:root[data-theme="dark"] {
+		--color-bkg: 205deg 33% 19%;
+		--color-content: 0deg 0% 96%;
+		--color-accent-1: 212deg 97% 74%;
+		--color-accent-2: 211deg 100% 56%;
+	}
+
+	:root[data-theme="light"] {
+		--color-bkg: 0deg 0% 96%;
+		--color-content: 205deg 33% 19%;
+		--color-accent-1: 211deg 100% 56%;
+		--color-accent-2: 212deg 97% 74%;
+	}
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	font-family: Georgia, "Times New Roman", Times, serif;
+	max-width: 1835px;
 }
