@@ -2,7 +2,7 @@ import Banner from "@/components/Banner";
 
 export default function Home() {
 	return (
-		<main className="flex h-auto flex-col px-24">
+		<main className="flex h-auto flex-col px-24 sm:px-6">
 			<Banner />
 
 			<div>
