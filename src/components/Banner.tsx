@@ -11,7 +11,10 @@ const Banner = () => {
 				potential and impact.
 			</p>
 			<p className="lg:w-[80%] w-2/5 m-4 text-xl md:w-full">Nov. 16 - 18</p>
-			<a href="#" className="bg-vividOrange py-3 px-6 text-white rounded">
+			<a
+				href="https://guestli.st/754095"
+				className="bg-vividOrange py-3 px-6 text-white rounded"
+			>
 				Register
 			</a>
 		</div>
