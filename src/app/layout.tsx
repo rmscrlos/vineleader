@@ -17,9 +17,6 @@ export const metadata: Metadata = {
 			"max-snippet": -1,
 		},
 	},
-	icons: {
-		shortcut: "./favicon.ico",
-	},
 };
 
 export default function RootLayout({
@@ -29,7 +26,10 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className="bg-bkg text-content">
+			<head>
+				<link rel="icon" href="./favicon.ico" sizes="any" />
+			</head>
+			<body className="bg-background text-foreground">
 				<ThemeProvider>
 					<Header />
 					{children}
