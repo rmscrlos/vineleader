@@ -94,6 +94,9 @@ module.exports = {
 			sm: { max: "639px" },
 			// => @media (max-width: 639px) { ... }
 
+			minLg: "1024px",
+			// => @media (min-width: 1024px) { ... }
+
 			minMd: "768px",
 			// => @media (min-width: 768px) { ... }
 

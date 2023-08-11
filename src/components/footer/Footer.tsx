@@ -16,6 +16,7 @@ const Footer = () => {
 				<h2 className="tracking-widest mb-2">MENU</h2>
 				<div className="flex flex-col justify-between gap-1 font-sm font-light">
 					<Link href="/">Home</Link>
+					<Link href="/podcasts">Podcasts</Link>
 					<Link href="/resources">Resources</Link>
 					<Link href="/events">Events</Link>
 				</div>
