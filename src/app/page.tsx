@@ -5,7 +5,7 @@ export default function Home() {
 		<main className="flex h-auto flex-col px-24 sm:px-6">
 			<Banner />
 
-			<div>
+			<div className="h-[20rem] md:h-auto">
 				<h3 className="text-3xl">Coming soon</h3>
 				<div className="flex items-center justify-around my-12 gap-5 md:items-baseline sm:flex-col">
 					<div className="w-[30%] p-3 bg-foreground text-background rounded drop-shadow-sm sm:w-full">
