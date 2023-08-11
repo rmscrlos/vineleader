@@ -14,6 +14,7 @@ const Header = async () => {
 			</div>
 
 			<div className="flex justify-center items-center gap-4">
+				{/* Fix later */}
 				{/* <ThemeToggle /> */}
 				{session?.user ? (
 					<UserAccountNav user={session.user} />
