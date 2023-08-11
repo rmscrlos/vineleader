@@ -1,4 +1,4 @@
-import ThemeToggle from "@/app/ThemeToggle";
+import { ThemeToggle } from "@/app/ThemeToggle";
 import SignInButton from "../SignInButton";
 import { getAuthSession } from "@/lib/nextauth";
 import UserAccountNav from "../UserAccountNav";
@@ -13,8 +13,7 @@ const Header = async () => {
 			</div>
 
 			<div className="flex justify-center items-center gap-4">
-				{/* Fix later */}
-				{/* <ThemeToggle /> */}
+				<ThemeToggle />
 				{session?.user ? (
 					<UserAccountNav user={session.user} />
 				) : (

@@ -1,10 +1,10 @@
 import Header from "@/components/header/Header";
 import "./globals.css";
 import type { Metadata } from "next";
-import ThemeProvider from "./ThemeProvider";
-import { Poppins, Geo } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
 import Footer from "@/components/footer/Footer";
+import Providers from "@/app/Providers";
 
 export const metadata: Metadata = {
 	title: "HOME | Vineleader",
@@ -40,11 +40,11 @@ export default function RootLayout({
 				<link rel="icon" href="./favicon.ico" sizes="any" />
 			</head>
 			<body className={cn(poppins.className, "bg-background text-foreground")}>
-				<ThemeProvider>
+				<Providers>
 					<Header />
 					{children}
 					<Footer />
-				</ThemeProvider>
+				</Providers>
 			</body>
 		</html>
 	);
