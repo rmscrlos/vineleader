@@ -5,7 +5,7 @@ import Link from "next/link";
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
 	return (
-		<div className="bg-foreground h-[20rem] text-background flex justify-center items-baseline gap-[20rem] py-[5rem]">
+		<div className="bg-foreground h-[20rem] text-background flex justify-around items-baseline  py-[5rem] w-auto md:flex-col md:h-auto md:gap-[5rem] md:justify-center md:items-center md:text-center">
 			<div className="h-[100%] flex flex-col justify-between">
 				<h1 className="font-geo text-3xl">vine leader</h1>
 				<p className="font-light text-sm">
