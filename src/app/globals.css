@@ -76,7 +76,6 @@
 	}
 	body {
 		@apply bg-background text-foreground;
-		font-family: Georgia, "Times New Roman", Times, serif;
 		max-width: 1835px;
 	}
 }
