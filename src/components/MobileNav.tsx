@@ -7,6 +7,7 @@ import { User } from "next-auth";
 import UserAccountNav from "@/components/UserAccountNav";
 import VineLeaderLogo from "@/components/VineLeaderLogo";
 import { ThemeToggle } from "@/app/ThemeToggle";
+import SignInButton from "@/components/SignInButton";
 
 type Props = {
 	user: Pick<User, "name" | "email" | "image"> | undefined;
@@ -38,15 +39,14 @@ const MobileNav = ({ user }: Props) => {
 			/>
 
 			<div
-				className={`fixed top-0 bg-background h-screen z-10 duration-300 ${
+				className={`fixed top-0 bg-background h-screen z-10 duration-200 ${
 					isMobileNaveOpen ? "right-0" : "-right-[999px]"
 				} lg:w-1/2 md:w-2/4 sm:w-full `}
 			>
 				<div className="flex-col w-full item-center justify-center pt-3">
-					<div className="flex items-center pr-5 pl-5">
-						<div className="minSm:hidden w-3/4 text-sm">
-							<VineLeaderLogo />
-						</div>
+					<div className="flex justify-between items-center pr-5 pl-5">
+						<VineLeaderLogo className="w-full" />
+
 						<button
 							className="flex items-center w-full justify-end"
 							onClick={() => toggleOff()}
@@ -67,12 +67,14 @@ const MobileNav = ({ user }: Props) => {
 						))}
 					</div>
 
-					{user && (
-						<div className="flex gap-2 justify-end mr-12">
-							<ThemeToggle />
+					<div className="flex gap-2 justify-end mr-12">
+						<ThemeToggle />
+						{user ? (
 							<UserAccountNav user={user} />
-						</div>
-					)}
+						) : (
+							<SignInButton text="Sign In" />
+						)}
+					</div>
 				</div>
 			</div>
 		</div>
