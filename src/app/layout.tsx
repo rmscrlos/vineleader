@@ -7,7 +7,7 @@ import Footer from "@/components/footer/Footer";
 import Providers from "@/app/Providers";
 
 export const metadata: Metadata = {
-	title: "HOME | Vineleader",
+	title: "HOME | Vine Leader",
 	description: "Maximize Your Leadership",
 	robots: {
 		index: true,

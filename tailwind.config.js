@@ -22,6 +22,7 @@ module.exports = {
 				blueaccent: {
 					1: "hsl(var(--color-accent-1) / <alpha-value>)",
 					2: "hsl(var(--color-accent-2) / <alpha-value>)",
+					3: "hsl(var(--color-accent-3) / <alpha-value>)",
 				},
 				vividOrange: "#FF6633",
 				border: "hsl(var(--border))",

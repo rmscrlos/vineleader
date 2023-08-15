@@ -58,10 +58,10 @@ const Navbar = (props: Props) => {
 								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 							</ListItem>
 							<Link
-								className="bg-blueaccent-1 text-white self-baseline px-2 py-3 rounded w-fit dark:bg-white dark:text-background"
+								className="bg-blueaccent-1 text-white self-baseline px-5 py-3 rounded w-fit dark:bg-white dark:text-background"
 								href="/"
 							>
-								more podcasts
+								MORE
 							</Link>
 						</ul>
 					</NavigationMenuContent>
@@ -93,10 +93,10 @@ const Navbar = (props: Props) => {
 								Voluptates, harum!.
 							</ListItem>
 							<Link
-								className="bg-blueaccent-1 text-white self-baseline px-2 py-3 rounded w-fit dark:bg-white dark:text-background"
+								className="bg-blueaccent-1 text-white self-baseline px-5 py-3 rounded w-fit dark:bg-white dark:text-background"
 								href="/"
 							>
-								more resources
+								MORE
 							</Link>
 						</ul>
 					</NavigationMenuContent>
