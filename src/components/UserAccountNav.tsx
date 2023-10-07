@@ -16,7 +16,7 @@ import { LogOut } from "lucide-react";
 import UserAvatar from "./UserAvatar";
 
 type Props = {
-	user: Pick<User, "name" | "email" | "image">;
+	user: User & { role: string };
 };
 
 const UserAccountNav = ({ user }: Props) => {
@@ -41,6 +41,15 @@ const UserAccountNav = ({ user }: Props) => {
 				</div>
 
 				<DropdownMenuSeparator />
+
+				{user?.role === "admin" && (
+					<>
+						<Link href="/dashboard">
+							<DropdownMenuItem>Dashboard</DropdownMenuItem>
+						</Link>
+						<DropdownMenuSeparator />
+					</>
+				)}
 
 				<DropdownMenuItem
 					onClick={(e) => {

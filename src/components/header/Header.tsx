@@ -1,13 +1,13 @@
-import { ThemeToggle } from "@/app/ThemeToggle";
-import SignInButton from "../SignInButton";
-import { getAuthSession } from "@/lib/nextauth";
-import UserAccountNav from "@/components/UserAccountNav";
+import { currentUser, UserButton, SignInButton } from "@clerk/nextjs";
+import type { User } from "@clerk/nextjs/api";
+
 import VineLeaderLogo from "@/components/VineLeaderLogo";
 import Navbar from "@/components/Navbar";
 import MobileNav from "@/components/MobileNav";
+import { Button } from "../ui/button";
 
 const Header = async () => {
-	const session = await getAuthSession();
+	const user: User | null = await currentUser();
 	return (
 		<div className="h-32 bg-background px-24 flex justify-between items-center md:px-16 sm:px-6">
 			<div>
@@ -19,15 +19,16 @@ const Header = async () => {
 					<Navbar />
 				</div>
 				<div className="flex justify-center items-center gap-3 lg:hidden">
-					<ThemeToggle />
-					{session?.user ? (
-						<UserAccountNav user={session.user} />
+					{user ? (
+						<UserButton afterSignOutUrl="/" />
 					) : (
-						<SignInButton text="Sign In" />
+						<Button>
+							<SignInButton />
+						</Button>
 					)}
 				</div>
 				<div className="minLg:hidden">
-					<MobileNav user={session?.user} />
+					<MobileNav />
 				</div>
 			</div>
 		</div>

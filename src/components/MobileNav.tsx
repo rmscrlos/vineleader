@@ -2,16 +2,10 @@
 import React, { useState } from "react";
 import { AlignRight, XSquare } from "lucide-react";
 import Link from "next/link";
-import { User } from "next-auth";
+import { SignInButton, UserButton, useUser } from "@clerk/nextjs";
 
-import UserAccountNav from "@/components/UserAccountNav";
 import VineLeaderLogo from "@/components/VineLeaderLogo";
-import { ThemeToggle } from "@/app/ThemeToggle";
-import SignInButton from "@/components/SignInButton";
-
-type Props = {
-	user: Pick<User, "name" | "email" | "image"> | undefined;
-};
+import { Button } from "./ui/button";
 
 const mainNavItems = [
 	{ name: "Home", href: "/" },
@@ -20,7 +14,9 @@ const mainNavItems = [
 	{ name: "Resources", href: "/" },
 ];
 
-const MobileNav = ({ user }: Props) => {
+const MobileNav = () => {
+	const { user } = useUser();
+
 	const [isMobileNaveOpen, setIsMobileNavOpen] = useState(false);
 	const handleToggle = () => setIsMobileNavOpen(!isMobileNaveOpen);
 	const toggleOff = () => setIsMobileNavOpen(false);
@@ -68,11 +64,12 @@ const MobileNav = ({ user }: Props) => {
 					</div>
 
 					<div className="flex gap-2 justify-end mr-12">
-						<ThemeToggle />
 						{user ? (
-							<UserAccountNav user={user} />
+							<UserButton afterSignOutUrl="/" />
 						) : (
-							<SignInButton text="Sign In" />
+							<Button>
+								<SignInButton />
+							</Button>
 						)}
 					</div>
 				</div>

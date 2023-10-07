@@ -26,7 +26,7 @@ const Navbar = (props: Props) => {
 					</Link>
 				</NavigationMenuItem>
 				<NavigationMenuItem>
-					<Link href="/" legacyBehavior passHref>
+					<Link href="/events" legacyBehavior passHref>
 						<NavigationMenuLink className={navigationMenuTriggerStyle()}>
 							Events
 						</NavigationMenuLink>
@@ -54,15 +54,20 @@ const Navbar = (props: Props) => {
 									</a>
 								</NavigationMenuLink>
 							</li>
-							<ListItem href="/" title="Latest Series">
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-							</ListItem>
-							<Link
-								className="bg-blueaccent-1 text-white self-baseline px-5 py-3 rounded w-fit dark:bg-white dark:text-background"
-								href="/"
-							>
-								MORE
-							</Link>
+							<NavigationMenuLink asChild>
+								<ListItem href="/" title="Latest Series">
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+								</ListItem>
+							</NavigationMenuLink>
+
+							<NavigationMenuLink asChild>
+								<Link
+									className="bg-blueaccent-1 text-white self-baseline px-5 py-3 rounded w-fit dark:bg-white dark:text-background"
+									href="/podcasts"
+								>
+									MORE
+								</Link>
+							</NavigationMenuLink>
 						</ul>
 					</NavigationMenuContent>
 				</NavigationMenuItem>
@@ -88,16 +93,20 @@ const Navbar = (props: Props) => {
 									</a>
 								</NavigationMenuLink>
 							</li>
-							<ListItem href="/" title="Resource 2">
-								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-								Voluptates, harum!.
-							</ListItem>
-							<Link
-								className="bg-blueaccent-1 text-white self-baseline px-5 py-3 rounded w-fit dark:bg-white dark:text-background"
-								href="/"
-							>
-								MORE
-							</Link>
+							<NavigationMenuLink asChild>
+								<ListItem href="/" title="Resource 2">
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+									Voluptates, harum!.
+								</ListItem>
+							</NavigationMenuLink>
+							<NavigationMenuLink asChild>
+								<Link
+									className="bg-blueaccent-1 text-white self-baseline px-5 py-3 rounded w-fit dark:bg-white dark:text-background"
+									href="/resources"
+								>
+									MORE
+								</Link>
+							</NavigationMenuLink>
 						</ul>
 					</NavigationMenuContent>
 				</NavigationMenuItem>
