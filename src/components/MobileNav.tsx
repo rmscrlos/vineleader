@@ -9,9 +9,9 @@ import { Button } from "./ui/button";
 
 const mainNavItems = [
 	{ name: "Home", href: "/" },
-	{ name: "Events", href: "/" },
-	{ name: "Podcasts", href: "/" },
-	{ name: "Resources", href: "/" },
+	{ name: "Events", href: "/events" },
+	{ name: "Podcasts", href: "/podcasts" },
+	{ name: "Resources", href: "/resources" },
 ];
 
 const MobileNav = () => {
