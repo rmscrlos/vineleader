@@ -9,7 +9,7 @@ export default function Home() {
 			<section className="w-full h-[40rem] bg-blueaccent-1 rounded-md flex justify-center items-center mb-24 gap-20 text-white drop-shadow-lg md:flex-col md:h-[50rem]">
 				<div>
 					<h1 className="text-6xl sm:text-5xl">
-						Vine <br /> Leader <br /> Conference
+						Vine <br /> Leader <br /> Summit
 					</h1>
 					<p>Nov. 16 - 19</p>
 				</div>
