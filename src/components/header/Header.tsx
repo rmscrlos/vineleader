@@ -9,7 +9,7 @@ import { Button } from "../ui/button";
 const Header = async () => {
 	const user: User | null = await currentUser();
 	return (
-		<div className="h-32 bg-background px-24 flex justify-between items-center md:px-16 sm:px-6">
+		<div className="h-32 bg-background px-24 flex justify-between items-center mb-10 md:px-16 sm:px-6">
 			<div>
 				<VineLeaderLogo />
 			</div>

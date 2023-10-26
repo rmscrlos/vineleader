@@ -8,7 +8,7 @@ const buttons = [
 	{ title: "Resources", path: "resources" },
 ];
 
-const Hero = () => {
+const LandingPageHero = () => {
 	return (
 		<div className="relative h-[36rem] flex justify-center items-center mb-[5rem] lg:h-[30rem] md:h-[20rem] md:mb-[1rem]">
 			<div className="absolute top-[2rem] left-[24rem] w-72 h-72 rounded-full bg-blueaccent-1 opacity-20 blur-3xl md:left-[12rem] md:top-[0] md:w-40 md:h-40 md:blur-2xl" />
@@ -17,13 +17,17 @@ const Hero = () => {
 				<h1 className="text-8xl text-center lg:text-7xl sm:text-[2.9rem]">
 					Maximize <br /> Your Leadership
 				</h1>
-				<div className="text-1xl">
+				<div className="text-3xl md:text-xl">
 					<TypewriterTitle />
 				</div>
 				<div className="mt-[6rem] w-full flex justify-center items-center">
 					{buttons.map(({ title, path }, index) => (
-						<Link className="mx-4" href={path} key={`${title}-${index}`}>
-							<Button variant="default">{title}</Button>
+						<Link
+							className="mx-4 bg-foreground text-white my-6 inline-block py-2 px-5 rounded relative"
+							href={path}
+							key={`${title}-${index}`}
+						>
+							{title}
 						</Link>
 					))}
 				</div>
@@ -32,4 +36,4 @@ const Hero = () => {
 	);
 };
 
-export default Hero;
+export default LandingPageHero;
